@@ -36,7 +36,7 @@ jobs:
     needs: build-prod-job
     steps:
       - name: Download dist folder artifact
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: dist-production
           path: dist
@@ -49,4 +49,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{secrets.GITHUB_TOKEN}}
-          publish_dir: ./dir
+          publish_dir: dist
