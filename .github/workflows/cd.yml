@@ -16,4 +16,4 @@ jobs:
   auto-deploy-job:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "auto-deploy-job
+      - run: echo "auto-deploy-job"
