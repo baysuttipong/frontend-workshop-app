@@ -46,7 +46,8 @@ jobs:
       - uses: actions/checkout@v5
 
       - name: Deploy to Github Pages
-        uses: peaceiris/actions-gh-pages@v4
+        uses: SerhiiKa/VuePagesAction@1.0.4
         with:
-          github_token: ${{secrets.GITHUB_TOKEN}}
-          publish_dir: dist
+          username: ${{github.actor}}
+          reponame: ${{github.event.repository.name}}
+          token: ${{secrets.GITHUB_TOKEN}}
